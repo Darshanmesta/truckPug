@@ -57,17 +57,17 @@ module.exports={
                 res.status(400).send("No Data Found <a href='/'>Return Home</a>")
             }
             else{
-                let pro= new Product(req.body)
-               pro.name= data.name
-                pro.email=data.email
-                pro.select=data.select
-               pro.phone=data.phone 
-              pro.desc= data.desc 
-               pro.image= data.image
-               pro.truckmodel= data.truckmodel
+               
+               data.name=req.body.name
+               data.email=req.body.email
+               data.select=req.body.select
+               data.phone =req.body.phone
+              data.desc =req.body.desc
+              data.image=req.body.image
+              data.truckmodel=req.body.truckmodel
 
 
-                pro.save().then(
+                data.save().then(
                     result=>{
                         res.status(200).send("Data Update Success <a href='/'>Return Home </a>")
                     }
