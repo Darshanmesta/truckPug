@@ -1,0 +1,96 @@
+doctype html
+html
+    head
+        title="New Pug Page"
+        link(href="https://bootswatch.com/3/paper/bootstrap.min.css",type="text/css",rel="stylesheet")
+        meta(name="viewport",content="width=device-width,initial-scale=-1")
+        script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js")
+        script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js")
+
+    body
+        nav.navbar.navbar-default
+            .container
+                div(class="navbar-header")
+                    a(href="/" class='navbar-brand') Home
+                    button(class="navbar-toggle" data-toggle="collapse" data-target="#myDiv")
+                        span.icon-bar
+                        span.icon-bar
+                        span.icon-bar
+                div(class='navbar-collapse collapse' id="myDiv")
+                    ul.nav.navbar-nav
+                        li
+                            a(href="/") Products
+                        li
+                            a(href="/create") Create
+
+        .container
+            .row
+                .col-xs-12
+                    h2.jumbotron.text-center Welcome to This Page
+
+        .container
+            .row
+                .col-md-6.col-md-offset-3.well
+                    form(action="/create" method="POST")
+                        div(class="form-group")
+                            label(for="") Username:
+                            input(type="text" placeholder="Enter your name" name="name" class='form-control' autofocus required)
+                        div(class="form-group")
+                            label(for="") Email:
+                            input(type="email" placeholder="someone@example.com" name="email" class="form-control" required)
+                        div(class='form-group')
+                            label(for="") Phone:
+                            br
+                            br
+                            label(for="select") Country code:
+                            select(name="select" class='form-control' required)
+                                option(value="+001") +001
+                                option(value="+002") +002
+                                option(value="+003") +003
+                                option(value="+004") +004
+                                option(value="+005") +005
+                                option(value="+91")  +91
+                            label(for="phone") Phone Number:
+                            br
+                            input(type="text" placeholder="97xxxxxxx4" class='form-control' name="phone" required)
+                        div(class="form-group")
+                            label(for="") Truck Image 
+                            input(type="url" placeholder="https://www.abc.com" name="image" class="form-control" required)
+                        div(class="form-group")
+                            label(for="") Truck Model and Name:
+                            input(type="text" placeholder="Ex: DAF" class="form-control" name="truckmodel" required)
+                        //- div(class="form-group")
+
+                        //-     label(for="") Upload Image: 
+
+                           
+                        //-         input(type="file" mutliple required name="myUpload" )
+                        //-         a(href="/upload" class="btn btn-md btn-success") Confirm
+                        div(class="form-group")
+                            label(for="") Desc:
+                            br
+                            textarea(name="desc", cols="30", rows="10" class="form-control" maxlength=1000 required)
+                        div(class='form-group')
+
+                            button(type='submit' class='btn btn-info btn-md ') Submit
+                            button(type="reset" class='btn btn-danger btn-md pull-right') Reset
+                           
+                           
+
+
+
+                           
+                              
+                               
+                                
+                               
+                              
+                      
+                            
+                           
+                            
+                       
+
+            
+               
+                    
